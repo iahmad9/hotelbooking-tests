@@ -50,7 +50,8 @@ public class HotelBookingTest {
 
 
 	/**
-	 * Description: Makes a booking using given data inputs.
+	 * Description: Helper method to make a booking using given 
+	 * data inputs.
 	 * 
 	 * @param firstName
 	 * @param lastName
@@ -59,7 +60,6 @@ public class HotelBookingTest {
 	 * @param CheckinDate
 	 * @param CheckoutDate
 	 * 
-	 * @return Unique text to verify booking entry is created successfully.
 	 */
 
 	private void createBooking(String firstName, String lastName, String price, String deposit, String checkinDate, String checkoutDate ) {
@@ -74,11 +74,11 @@ public class HotelBookingTest {
 	}
 
 	/**
-	 * Description: Remove existing booking identified by given text.
+	 * Description: Helper method to remove existing booking 
+	 * identified by given text.
 	 * 
 	 * @param textToFindBooking
 	 * 
-	 * @return Unique text to verify booking entry is created successfully.
 	 */
 	
 	private void removeBooking(String textToFindBooking) {
@@ -105,9 +105,8 @@ public class HotelBookingTest {
 
 	
 	/**
-	 * Test: Verify removing a booking is successful after creation. 
+	 * Test: To Verify removing a booking is successful after creation. 
 	 * 
-	 * @return None
 	 */
 
 	@Test (invocationCount=1)
