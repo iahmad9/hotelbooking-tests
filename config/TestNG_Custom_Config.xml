@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="HotellBookingTestSuite" parallel="false">
+	<test name="FirefoxTests">
+		<parameter name="browser" value="firefox" />
+		<classes>
+			<class name="com.ee.hotelbooking.tests.framework.HotelBookingTest" />
+		</classes>
+	</test>
+	<test name="ChromeTests">
+		<parameter name="browser" value="chrome" />
+		<classes>
+			<class name="com.ee.hotelbooking.tests.framework.HotelBookingTest" />
+		</classes>
+	</test>
+
+</suite>
