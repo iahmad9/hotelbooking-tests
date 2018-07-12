@@ -14,11 +14,11 @@ Also note that for sake of this exercise, eclipse default Java project is used t
 * Now Build the project
 
 ### How to Run:
-* Before running the tests, download the copy the geckodriver and chromdriver to one of the environment variable paths e.g. /usr/local/bin
+* Before running the tests, download the copy of the geckodriver and chromdriver to one of the environment variable paths e.g. /usr/local/bin
 
 * From Package Explorer, expand config folder, right click on TestNG_Custom_Config.xml file and select * Run As => TestNG Suite * option
 * Wait for the test execution to finish
-* Test Results can be see on "Results of running suite" tab within eclipse or test_output director can be found alongside of project folder.
+* Test Results can be seen on "Results of running suite" tab within eclipse or test_output directory can be found alongside of project folder.
 * By default it will try to run for Firefox and Chrome browsers.
 
 
