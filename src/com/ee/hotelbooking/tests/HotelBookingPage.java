@@ -21,33 +21,52 @@ import org.openqa.selenium.support.ui.WebDriverWait;
  */
 
 public class HotelBookingPage {
+	
+	public static final String LOCATOR_ID_FIRSTNAME = "firstname";
 
+	public static final String LOCATOR_ID_LASTNAME = "lastname";
+
+	public static final String LOCATOR_ID_PRICE = "totalprice";
+
+	public static final String LOCATOR_ID_DEPOSIT = "depositpaid";
+
+	public static final String LOCATOR_ID_CHECKIN = "checkin";
+
+	public static final String LOCATOR_ID_CHECKOUT = "checkout";
+	
+	public static final String LOCATOR_CSS_SELECTOR_SAVE = "#form > div:nth-child(1) > div:nth-child(7) > input:nth-child(1)"; 
+	
+	public static final String LOCATOR_XPATH_BOOKING_ENTRY = "//div/*[contains(text(), \"%s\")]";
+	
+	public static final String LOCATOR_XPATH_ENTRY_DELETE = LOCATOR_XPATH_BOOKING_ENTRY+"/parent::*/parent::*//input[@value=\"Delete\"]";
+			
+			
 	public static WebElement get_elementFirstName(WebDriver driver) {
-		return driver.findElement(By.id("firstname"));
+		return driver.findElement(By.id(LOCATOR_ID_FIRSTNAME));
 	}
 
 	public static WebElement get_elementLastName(WebDriver driver) {
-		return driver.findElement(By.id("lastname"));
+		return driver.findElement(By.id(LOCATOR_ID_LASTNAME));
 	}
 
 	public static WebElement get_elementPrice(WebDriver driver) {
-		return driver.findElement(By.id("totalprice"));
+		return driver.findElement(By.id(LOCATOR_ID_PRICE));
 	}
 
 	public static WebElement get_elementDeposit(WebDriver driver) {
-		return driver.findElement(By.id("depositpaid"));
+		return driver.findElement(By.id(LOCATOR_ID_DEPOSIT));
 	}
 
 	public static WebElement get_elementCheckin(WebDriver driver) {
-		return driver.findElement(By.id("checkin"));
+		return driver.findElement(By.id(LOCATOR_ID_CHECKIN));
 	}
 
 	public static WebElement get_elementCheckout(WebDriver driver) {
-		return driver.findElement(By.id("checkout"));
+		return driver.findElement(By.id(LOCATOR_ID_CHECKOUT));
 	}
 
 	public static WebElement get_elementSave(WebDriver driver) {
-		return driver.findElement(By.cssSelector("#form > div:nth-child(1) > div:nth-child(7) > input:nth-child(1)"));
+		return driver.findElement(By.cssSelector(LOCATOR_CSS_SELECTOR_SAVE));
 	}
 
 	/*
@@ -60,23 +79,23 @@ public class HotelBookingPage {
 		
 		WebDriverWait wait = new WebDriverWait(driver, Constants.WAIT_TIMEOUT);
 		try {
-			wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div/*[contains(text(), \"" + text + "\")]")));
+			wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(String.format(LOCATOR_XPATH_BOOKING_ENTRY, text))));
 		} catch (TimeoutException toe) {
 			return null;
 		}
 		
-		return driver.findElement(By.xpath("//div/*[contains(text(), \"" + text + "\")]"));
+		return driver.findElement(By.xpath(String.format(LOCATOR_XPATH_BOOKING_ENTRY, text)));
 	}
 	
 	public static WebElement get_elementDeleteByText(WebDriver driver, String text) {
 		
 		WebDriverWait wait = new WebDriverWait(driver, Constants.WAIT_TIMEOUT);
 		try {
-			wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div/*[contains(text(), \"" + text + "\")]/parent::*/parent::*//input[@value=\"Delete\"]")));
+			wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(String.format(LOCATOR_XPATH_ENTRY_DELETE, text))));
 		} catch (TimeoutException toe) {
 			return null;
 		}
 		
-		return driver.findElement(By.xpath("//div/*[contains(text(), \"" + text + "\")]/parent::*/parent::*//input[@value=\"Delete\"]"));
+		return driver.findElement(By.xpath(String.format(LOCATOR_XPATH_ENTRY_DELETE, text)));
 	}
 }
