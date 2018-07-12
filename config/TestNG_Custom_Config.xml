@@ -4,13 +4,13 @@
 	<test name="FirefoxTests">
 		<parameter name="browser" value="firefox" />
 		<classes>
-			<class name="com.ee.hotelbooking.tests.framework.HotelBookingTest" />
+			<class name="com.ee.hotelbooking.tests.HotelBookingTest" />
 		</classes>
 	</test>
 	<test name="ChromeTests">
 		<parameter name="browser" value="chrome" />
 		<classes>
-			<class name="com.ee.hotelbooking.tests.framework.HotelBookingTest" />
+			<class name="com.ee.hotelbooking.tests.HotelBookingTest" />
 		</classes>
 	</test>
 

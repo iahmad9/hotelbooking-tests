@@ -1,4 +1,4 @@
-package com.ee.hotelbooking.tests.utils;
+package com.ee.hotelbooking.tests;
 
 /**
  * Constants.java 

@@ -1,10 +1,11 @@
-package com.ee.hotelbooking.tests.framework;
+package com.ee.hotelbooking.tests;
 
-import com.ee.hotelbooking.tests.pageobjects.HotelBookingPage;
-import com.ee.hotelbooking.tests.utils.Constants;
+import com.ee.hotelbooking.tests.HotelBookingPage;
+import com.ee.hotelbooking.tests.Constants;
 
 import org.testng.annotations.Test;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Optional;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.Parameters;
@@ -35,7 +36,7 @@ public class HotelBookingTest {
 	
 	@Parameters("browser")
 	@BeforeClass
-	public void beforeClass(String browser) {
+	public void beforeClass(@Optional("browser") String browser) {
 		if (browser.equalsIgnoreCase("firefox")) {
 			driver = new FirefoxDriver();
 		} else {

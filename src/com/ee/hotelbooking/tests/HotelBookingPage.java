@@ -1,4 +1,6 @@
-package com.ee.hotelbooking.tests.pageobjects;
+package com.ee.hotelbooking.tests;
+
+import com.ee.hotelbooking.tests.Constants;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.TimeoutException;
@@ -7,7 +9,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import com.ee.hotelbooking.tests.utils.Constants;
+
 
 /**
  * HotelBookingPage.java 
